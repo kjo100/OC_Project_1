@@ -4,7 +4,6 @@
 
 * {
     font-family: 'Raleway', sans-serif;
-    /*    outline: 1px solid red;*/
 }
 
 :root {
@@ -21,8 +20,6 @@
 body {
     display: flex;
     justify-content: center;
-    margin: 0;
-    padding: 0;
 }
 
 .main-container {
@@ -37,7 +34,6 @@ body {
 }
 
 .section-title {
-    margin: 0;
     font-size: 22px;
 }
 
@@ -56,19 +52,13 @@ body {
     font-size: 16px;
 }
 
-.euro {
-    font-weight: 700;
-}
-
 .neutralStar {
     color: var(--main-bg-color)
 }
 
-
 main {
     padding-top: 20px;
 }
-
 
 /*Header*/
 
@@ -87,7 +77,7 @@ header .links {
 
 header .links a:hover {
     color: blue;
-    text-decoration: overline;
+    text-decoration: overline blue;
 }
 
 header .links a {
@@ -95,9 +85,6 @@ header .links a {
     color: black;
 }
 
-a:hover {
-    color: blue;
-}
 
 header img {
     height: 20px;
@@ -113,6 +100,7 @@ header img {
 
 .icons p {
     border: solid gray 1px;
+    font-weight: bold;
     padding: 10px;
     margin: 0px;
     border-radius: 30px;
@@ -128,10 +116,6 @@ header img {
     background-color: lightblue;
 }
 
-
-
-
-
 .topnav {
     padding-bottom: 20px;
 }
@@ -145,6 +129,7 @@ header img {
 .topnav .search-button {
     background-color: blue;
     color: white;
+    border: none;
     font-size: 15px;
     font-weight: bold;
     padding: 15px;
@@ -157,6 +142,10 @@ header img {
     display: none;
 }
 
+.topnav input {
+    border: none;
+}
+
 .topnav i {
     background-color: lightgray;
     color: black;
@@ -167,13 +156,32 @@ header img {
     margin-right: -5px;
 }
 
+.icon2 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
 .icon2 i {
     border: solid lightgray 1px;
-    padding: 15px;
-    border-radius: 30px;
+    font-size: 10px;
+    justify-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 50px;
+
+}
+
+.icon2 p {
+    margin-bottom: 0px;
 }
 
 /*body*/
+
 main .intro h2 {
     padding-bottom: 10px;
     margin-bottom: 0px;
@@ -224,6 +232,7 @@ main .intro p {
 
 .accommodation .showmore {
     padding-top: 30px;
+    font-size: 20px;
 }
 
 .accommodation .showmore h4 {
@@ -247,11 +256,6 @@ main .intro p {
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
 }
-
-.accommodation .showmore {
-    font-size: 20px;
-}
-
 
 
 /****** Popular ***********/
@@ -294,7 +298,7 @@ main .intro p {
 }
 
 .popular-cards .card-subtitle {
-    margin: 0;
+    margin: 0px;
 }
 
 .popular-cards .card-rating {
@@ -359,8 +363,9 @@ footer {
 
 
 
+
 /*sz1024*/
-@media screen and (min-width: 376px) and (max-width: 1024px) {
+@media screen and (min-width: 376px) and (max-width: 1025px) {
 
     /*header*/
     .topnav .fa-solid fa-magnifying-glass {
@@ -371,7 +376,6 @@ footer {
         padding-left: 20px;
         padding-right: 20px;
     }
-
 
     .symbols {
         gap: 10px;
@@ -391,8 +395,16 @@ footer {
     }
 
     /*accommodation*/
-    .accommodation {
+    .accommodation{
         width: 100%;
+    }
+
+    .accommodation .section-title {
+        margin-top: 0px;
+    }
+
+    .accommodation .accommodation-title {
+        padding-bottom: 15px;
     }
 
     .accommodation-cards {
@@ -401,8 +413,8 @@ footer {
         gap: 20px;
     }
 
-   .accommodation .accommodation-cards .card {
-        width: 260px;
+    .accommodation .accommodation-cards .card {
+        width: 255px;
         max-height: fit-content;
         padding-bottom: 0px;
     }
@@ -412,9 +424,9 @@ footer {
     }
 
     /*popular*/
-    .popular {
+    .accommodation-and-popular .popular {
         width: 100%;
-        padding: 0px;
+        padding-top: 15px;
     }
 
     .popular .popular-cards {
@@ -426,12 +438,14 @@ footer {
     .popular-cards .card {
         width: 100%;
         max-height: 150px;
+        margin-top: 0px;
     }
 
     /*activities*/
     .activity-cards {
         gap: 10px;
         padding-right: 0px;
+        padding-top: 0px;
     }
 
     .activity-cards .card {
@@ -453,24 +467,31 @@ footer {
     }
 }
 
-/*sz1900*/
-@media screen and (min-width: 1900px) {
 
-    /*body*/
-    .main-container {
-        margin-left: 250px;
-        margin-right: 250px;
-    }
+/*sz1440*/
+@media screen and (min-width: 1026px) and (max-width: 1441px) {
 
     /*accommodation*/
+
+    .accommodation-cards {
+        padding-top: 10px;
+    }
     .accommodation-cards .card {
-        width: 260px;
+        width: 250px;
+    }
+
+    .accommodation .accommodation-title {
+        padding-bottom: 0px ;
+    }
+
+    .accommodation .section-title {
+        margin-top: 0px;
     }
 
 }
 
 /*sz375*/
-@media screen and (max-width: 375px)
+@media screen and (max-width: 376px)
 /*header*/
 
     {
@@ -481,7 +502,7 @@ footer {
     }
 
     main {
-        padding-left: 20px;
+        padding-left: 0px;
         padding-right: 0px;
 
     }
@@ -499,8 +520,12 @@ footer {
         border-radius: 15px;
     }
 
+    .icons {
+        gap: 0px;
+    }
+
     .icon2 {
-        padding-top: 15px;
+        padding-top: 30px;
         padding-bottom: 30px;
     }
 
@@ -511,7 +536,7 @@ footer {
     }
 
     header .img {
-        padding-left: 130px;
+        padding-left: 140px;
         justify-content: center;
         align-items: center;
     }
@@ -522,6 +547,11 @@ footer {
         align-items: center;
         justify-content: center;
         gap: 90px;
+    }
+
+    header .links a:hover {
+        color: blue;
+        text-decoration: underline blue;
     }
 
     .topnav {
@@ -546,16 +576,17 @@ footer {
     }
 
     .symbols {
-        padding-right: 10px;
-        padding-left: 10px;
+        padding-right: 0px;
+        padding-left: 0px;
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
+        gap: 15px;
     }
 
 
     .symbols p {
-        width: 130px;
+        width: 140px;
         height: 30px;
         align-content: center;
         justify-content: center;
@@ -598,6 +629,7 @@ footer {
     .accommodation-and-popular .accommodation {
         background-color: white;
         padding: 0px;
+        width: 100%;
     }
 
     .accommodation .accommodation-cards {
@@ -612,12 +644,18 @@ footer {
         height: fit-content;
 
     }
-    .accommodation .accommodation-cards .card img{
+
+    .accommodation .accommodation-cards .card img {
         width: 400px;
     }
 
     .accommodation .section-title {
         padding-top: 20px;
+        width: 300px;
+    }
+
+    .accommodation-title {
+        padding-bottom: 0px;
     }
 
     .accommodation .showmore {
@@ -635,12 +673,16 @@ footer {
         padding-left: 0px;
     }
 
+
     .activity-cards .card {
-        width: 310px;
+        width: 330px;
+        border-radius: 30px;
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
     }
 
     .activity-cards .card img {
-        width: 320px;
+        width: 340px;
         height: 200px;
     }
 
@@ -655,11 +697,26 @@ footer {
     }
 }
 
-@media screen and (min-width: 1025px) and (max-width: 1440px) {
+/*sz1900*/
+@media screen and (min-width: 1442px) and (max-width: 1901px) {
+
+    /*body*/
+    .main-container {
+        margin-left: 250px;
+        margin-right: 250px;
+    }
 
     /*accommodation*/
     .accommodation-cards .card {
-        width: 100px;
+        width: 250px;
+    }
+
+    .accommodation .accommodation-title {
+        padding-bottom: 0px ;
+    }
+
+    .accommodation .section-title {
+        margin-top: 0px;
     }
 
 }
